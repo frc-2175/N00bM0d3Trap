@@ -30,6 +30,6 @@ public class Hatchet extends Subsystem {
     }
     
     public void setHatchet(boolean up) {
-        hatchet.set(up?DoubleSolenoid.Value.kForward:DoubleSolenoid.Value.kReverse);
+        hatchet.set(up?DoubleSolenoid.Value.kForward:DoubleSolenoid.Value.kOff);
     }
 }

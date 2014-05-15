@@ -28,13 +28,8 @@ public class RobotMap {
     public static DoubleSolenoid hatchet;
     public static Compressor compressor;
     public static void init() {
-        drivetrainLeftSpeedController = new Talon(1, 1);
-	LiveWindow.addActuator("Drivetrain", "Left Speed Controller", (Talon) drivetrainLeftSpeedController);
-        
-        drivetrainRightSpeedController = new Talon(1, 2);
-	LiveWindow.addActuator("Drivetrain", "Right Speed Controller", (Talon) drivetrainRightSpeedController);
-        
-        drivetrainRobotDrive = new RobotDrive(drivetrainLeftSpeedController, drivetrainRightSpeedController);
+        drivetrainRobotDrive = new RobotDrive(2,1);
+        //LiveWindow.addActuator("Drivetrain", "Drivetrain", (RobotDrive) drivetrainRobotDrive);
         
         drivetrainShifter = new Solenoid(1, 4);
 	LiveWindow.addActuator("Drivetrain", "Shifter", drivetrainShifter);

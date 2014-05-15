@@ -29,8 +29,8 @@ public class  DriveWithJoysticks extends Command {
     protected void execute() {
         double mult = 1;
         if (Robot.oi.getNoob())
-            mult = Robot.oi.getLeftThrottle();
-        Robot.drivetrain.arcadeDriveWithInputs(Robot.oi.getForwardValue() * mult, Robot.oi.getTurningValue() * mult);
+            mult = 0.5-0.5*Robot.oi.getLeftThrottle();
+        Robot.drivetrain.arcadeDriveWithInputs(Robot.oi.getForwardValue() * mult, Robot.oi.getTurningValue());
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
